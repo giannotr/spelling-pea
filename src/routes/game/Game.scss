@@ -1,0 +1,147 @@
+.game {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
+	height: inherit;
+	min-height: inherit;
+	padding-top: 50px;
+}
+
+.game__wrapper {
+	position: relative;
+	margin: 75px;
+}
+
+.game__controls {
+	position: fixed;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: row;
+}
+
+.game__controls__control {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 45px;
+	margin: 15px;
+	padding: 20px;
+	border: none;
+	border-radius: 30px;
+	background: var(--sp-medium-green);
+	color: var(--sp-light);
+	font-size: .67rem;
+	font-weight: 800;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+
+	svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	span {
+		margin-left: 10px;
+	}
+}
+
+.game__button {
+	position: absolute;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	font-size: larger;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--sp-medium-green);
+	background: var(--sp-light);
+	border-radius: 50%;
+	cursor: pointer;
+
+	&.required {
+		color: var(--sp-light);
+		background: var(--sp-medium-green);
+	}
+
+	&.selected {
+		background: var(--sp-light-green);
+		pointer-events: none;
+	}
+}
+
+.game__selection {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	height: 50px;
+	margin: 40px 10px 20px;
+	color: var(--sp-light);
+	font-size: xx-large;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+@keyframes type-sensor {
+	from {
+		border-color: transparent;
+	}
+
+	to {
+		border-color: var(--sp-dark);
+	}
+}
+
+.game__selection__letter {
+	margin: 3px;
+
+	&:last-of-type {
+		padding-right: 6px;
+		border-right: 3px solid var(--sp-dark);
+		animation: type-sensor linear 1s infinite;
+	}
+
+	&.required {
+		color: var(--sp-medium-green);
+	}
+}
+
+.game__solutions {
+	margin: 10px;
+}
+
+.game__solutions__count {
+	margin-bottom: 20px;
+	font-size: 1.5rem;
+	border-bottom: 2px solid var(--sp-light);
+
+
+	span {
+		font-size: 1.9rem;
+		font-weight: 800;
+		margin: 0 6px;
+		color: var(--sp-medium-green);
+	}
+}
+
+.game__solutions_list {
+	$item-width: 86px;
+	display: grid;
+  grid-template-columns: repeat(auto-fit, $item-width);
+  grid-gap: 14px;
+  justify-content: center;
+  width: 100%;
+  margin: 30px auto;
+	padding: 0 14px;
+
+	& > div {
+		width: $item-width;
+		font-size: .9rem;
+		font-weight: 700;
+		text-align: center;
+		text-transform: capitalize;
+	}
+}

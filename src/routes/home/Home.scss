@@ -1,0 +1,28 @@
+.header {
+	// background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.link {
+	margin: 60px auto;
+
+	a {
+		width: inherit;
+		height: inherit;
+		padding: 20px;
+		border-radius: var(--sp-border-rounding);
+		background-color: var(--sp-medium-green);
+		color: var(--sp-light);
+		text-decoration: none;
+
+		&:hover {
+			background-color: var(--sp-dark-green);
+		}
+	}
+}
