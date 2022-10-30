@@ -1,4 +1,4 @@
-import React, {
+import {
 	useState,
 	useContext,
 	useMemo,
@@ -233,7 +233,7 @@ function Game({ boardSize, buttonSize, numberOfButtons: N }: {
 				}
 
 				gameSolutions.add(selection);
-				parsed[game] = [...gameSolutions];
+				parsed[game] = Array.from(gameSolutions);// [...gameSolutions]
 
 				setSolutions(JSON.stringify(parsed));
 			} else {

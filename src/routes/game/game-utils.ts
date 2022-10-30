@@ -12,11 +12,11 @@ export const isValidGame = (game: string, length: number): boolean => {
 	const isOfLength = game.length === length;
 
 	let isRequiredLetterUnique = true;
-	const [ requiredLetter ] = game;
+	
 	const optionalLetters = game.slice(1, game.length).split('');
 
 	for(let letter of optionalLetters) {
-		if(letter === requiredLetter) {
+		if(letter === game[0]) {
 			isRequiredLetterUnique = false;
 			break;
 		}

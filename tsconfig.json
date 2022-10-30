@@ -1,23 +1,36 @@
 {
-  "compilerOptions": {
-    "jsx": "react",
-    "lib": ["es6", "dom"],
-    "rootDir": "src",
-    "module": "commonjs",
-    "target": "es2015",
-    "sourceMap": true,
-    "moduleResolution": "node",
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-		"esModuleInterop": true
-  },
-  "include": [
-    "./src"
-  ],
-  "exclude": [
-    "node_modules",
-    "build"
-  ]
+	"compilerOptions": {
+		"target": "es5",// es2015?
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
+		"rootDir": "src",
+		"sourceMap": true,
+		"allowJs": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		// "noImplicitReturns": true,
+		// "noImplicitThis": true,
+		// "noImplicitAny": true,
+		// "strictNullChecks": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "react-jsx"
+	},
+	"include": [
+		"src"
+	],
+	"exclude": [
+		"node_modules",
+		"build"
+	]
 }
