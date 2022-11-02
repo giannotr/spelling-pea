@@ -15,8 +15,8 @@
 
 .game__controls {
 	position: fixed;
-	top: 0;
-	right: 0;
+	top: 15px;
+	right: 15px;
 	display: flex;
 	flex-direction: row;
 }
@@ -26,7 +26,7 @@
 	align-items: center;
 	justify-content: center;
 	min-height: 45px;
-	margin: 15px;
+	margin: 10px;
 	padding: 20px;
 	border: none;
 	border-radius: 30px;
