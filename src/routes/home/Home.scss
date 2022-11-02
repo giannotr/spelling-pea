@@ -104,8 +104,21 @@ $exclamation_animation_time: 1500ms;
 		height: 30px;
 	}
 
+	&:hover {
+		background-color: var(--sp-medium-green);
+
+		svg {
+			fill: var(--sp-light);
+		}
+	}
+
 	&.toggled {
 		transform: rotate(90deg);
+		background-color: var(--sp-medium-green);
+
+		svg {
+			fill: var(--sp-light);
+		}
 	}
 }
 
