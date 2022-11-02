@@ -1,6 +1,6 @@
 import { useContext, useMemo, ChangeEvent, ChangeEventHandler } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useToggle } from 'react-use';
+import { useToggle, useWindowSize } from 'react-use';
 import { HiDotsHorizontal } from 'react-icons/hi';
 import SolutionsContext from '../../context/solutions-context';
 import Overlay from '../../components/Overlay/Overlay';
@@ -34,7 +34,16 @@ function PreviousGames({
 export default function Home() {
 	const { solutions } = useContext(SolutionsContext);
 	const [isMenuOpen, toggleMenu] = useToggle(false);
-	let navigate = useNavigate();
+	const navigate = useNavigate();
+	const { width } = useWindowSize();
+
+	const peasSty = useMemo(() => {
+		return({
+			minWidth: width < 400 ? '250px' : '350px',
+			width: '50%',
+			height: 'auto',
+		})
+	}, [width]);
 
 	const handleSelectGame = (e: ChangeEvent<HTMLSelectElement>) => {
 		navigate(`/game#${e.target.value}`);
@@ -50,11 +59,7 @@ export default function Home() {
 				<div className="intro__exclamation">Yip-pea!</div>
 
 				<div className="intro__peas">
-					<Peas style={{
-						minWidth: '350px',
-						width: '50%',
-						height: 'auto',
-					}} />
+					<Peas style={peasSty} />
 				</div>
 
 				<h1 className="intro__title">Spelling Pea</h1>
