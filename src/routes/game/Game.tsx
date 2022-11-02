@@ -8,8 +8,7 @@ import {
 import { useQuery } from 'react-query';
 import { useKey } from 'react-use';
 import { Notify } from 'notiflix';
-import { IoSend } from 'react-icons/io5';
-import { FiDelete } from 'react-icons/fi';
+import { ImCheckmark, ImCross } from 'react-icons/im';
 import Pea from './Pea';
 import DisplaySelection from './DisplaySelection';
 import DisplaySolutions from './DisplaySolutions';
@@ -297,14 +296,14 @@ function Game({ boardSize, buttonSize, numberOfButtons: N }: {
 
 			<div className="game__controls">				
 				<button className="game__controls__control" onClick={handleSubmit}>
-					<IoSend />
+					<ImCheckmark />
 					{submitLabel &&
 						<span>{isSubmitting ? isSubmittingLabel : submitLabel}</span>
 					}
 				</button>
 
 				<button className="game__controls__control" onClick={handleDeleteAll}>
-					<FiDelete />
+					<ImCross />
 					{deleteLabel && <span>{deleteLabel}</span>}
 				</button>
 			</div>

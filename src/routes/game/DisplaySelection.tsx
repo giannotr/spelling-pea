@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Helper component to render the selection
 export default function DisplaySelection({
 	selection,

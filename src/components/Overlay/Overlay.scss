@@ -1,0 +1,15 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -100%;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+	transition: left 100ms ease-out;
+	z-index: 9999;
+
+	&.active {
+		left: 0;
+	}
+}

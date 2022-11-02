@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Helper component to render one game button aka 'pea'
 export default function Pea({
 	idx,

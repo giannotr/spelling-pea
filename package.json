@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.5.1",
     "@types/react-helmet": "^6.1.5",
     "sass": "^1.54.9"
   }

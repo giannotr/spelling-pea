@@ -1,4 +1,4 @@
-import React, { createContext, ReactNode, Dispatch, SetStateAction } from 'react';
+import { createContext, ReactNode, Dispatch, SetStateAction } from 'react';
 import { useLocalStorage } from 'react-use';
 
 interface SolutionsState {

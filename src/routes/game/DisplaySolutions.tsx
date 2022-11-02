@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function DisplaySolutions({ isLoaded, data }: {
 	isLoaded: boolean;
 	data: string[];
